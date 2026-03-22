@@ -52,700 +52,700 @@
 
 \begin{document}
 
-\begin{center}
-  \Large\textbf{Stochastik und Statistik}
-\end{center}
+	\begin{center}
+		\Large\textbf{Stochastik und Statistik}
+	\end{center}
 
-\begin{multicols*}{3}
-  \setlength{\premulticols}{1pt}
-  \setlength{\postmulticols}{1pt}
-  \setlength{\multicolsep}{1pt}
-  \setlength{\columnsep}{2pt}
+	\begin{multicols*}{3}
+		\setlength{\premulticols}{1pt}
+		\setlength{\postmulticols}{1pt}
+		\setlength{\multicolsep}{1pt}
+		\setlength{\columnsep}{2pt}
 
-  \section*{Deskriptive Statistik}
-  \subsection*{Begriffe}
-  \begin{itemize}
-    \item \textbf{Merkmalsträger}: Objekte, über die Informationen gesammelt werden (z.B. Personen, Tiere, Dinge)
-    \item \textbf{Merkmal}: Eigenschaft eines Merkmalsträgers (z.B. Alter, Geschlecht, Größe)
-    \item \textbf{Grundgesamtheit}: Gesamte Menge aller Merkmalsträger
-    \item \textbf{Stichprobe}: Teilmenge der Grundgesamtheit
-    \item \textbf{Vollerhebung}: Untersuchung der gesamten Grundgesamtheit
-    \item \textbf{Ausprägung}: Mögliche Werte eines Merkmals
-  \end{itemize}
+		\section*{Deskriptive Statistik}
+		 \subsection*{Begriffe}
+			 \begin{itemize}
+				 \item \textbf{Merkmalsträger}: Objekte, über die Informationen gesammelt werden (z.B. Personen, Tiere, Dinge)
+				 \item \textbf{Merkmal}: Eigenschaft eines Merkmalsträgers (z.B. Alter, Geschlecht, Größe)
+				 \item \textbf{Grundgesamtheit}: Gesamte Menge aller Merkmalsträger
+				 \item \textbf{Stichprobe}: Teilmenge der Grundgesamtheit
+				 \item \textbf{Vollerhebung}: Untersuchung der gesamten Grundgesamtheit
+				 \item \textbf{Ausprägung}: Mögliche Werte eines Merkmals
+			 \end{itemize}
 
-  \includegraphics[width=\linewidth]{assets/Markmalstyp.png}
+			 \includegraphics[width=\linewidth]{assets/Markmalstyp.png}
 
-  \subsection*{Relative/Absolute Häufigkeit}
-  \subsubsection*{Nicht klassierte Daten}
-  \begin{equation*}
-    f_i = \frac{h_i}{n}
-  \end{equation*}
-  \subsubsection*{Klassierte Daten}
-  \begin{equation*}
-    d_i = \frac{f(x)}{b_i} \quad \text{mit} \quad f(x) = \frac{h_i}{n}
-  \end{equation*}
-  \begin{itemize}
-    \item $f_i$: relative Häufigkeit der Ausprägung $i$ (PMF)
-    \item $h_i$: absolute Häufigkeit der Ausprägung $i$
-    \item $d_i$: Dichte der Klasse $i$ (PDF)
-    \item $n$: Gesamtanzahl der Beobachtungen
-  \end{itemize}
+		 \subsection*{Relative/Absolute Häufigkeit}
+			 \subsubsection*{Nicht klassierte Daten}
+				 \begin{equation*}
+					 f_i = \frac{h_i}{n}
+				 \end{equation*}
+			 \subsubsection*{Klassierte Daten}
+				 \begin{equation*}
+					 d_i = \frac{f(x)}{b_i} \quad \text{mit} \quad f(x) = \frac{h_i}{n}
+				 \end{equation*}
+				 \begin{itemize}
+					 \item $f_i$: relative Häufigkeit der Ausprägung $i$ (PMF)
+					 \item $h_i$: absolute Häufigkeit der Ausprägung $i$
+					 \item $d_i$: Dichte der Klasse $i$ (PDF)
+					 \item $n$: Gesamtanzahl der Beobachtungen
+				 \end{itemize}
 
-  \subsection*{Summenhäufigkeit}
-  \subsubsection*{Diskrete Daten}
-  \begin{equation*}
-    H(x) = \sum_{j=1}^{x} h_j \quad \text{bzw.} \quad F(x) = \sum_{j=1}^{x} f_j
-  \end{equation*}
-  \subsubsection*{Stetige Daten}
-  \begin{equation*}
-    H(x_k) = \sum_{j=1}^{k} h_j \quad \text{bzw.} \quad F(x) = \int_{-\infty}^{x} f(y) \, dy
-  \end{equation*}
-  \begin{itemize}
-    \item $H(x)$: Summe aller absoluten Häufigkeiten bis Ausprägung $x$
-    \item Wenn $h$ absolute Häufigkeit, dann heisst $H$ Summenhäufigkeit
-    \item Wenn $f$ relative Häufigkeit, dann heisst $F$ kumulative Verteilungsfunktion (CDF)
-  \end{itemize}
+		 \subsection*{Summenhäufigkeit}
+			 \subsubsection*{Diskrete Daten}
+				 \begin{equation*}
+					 H(x) = \sum_{j=1}^{x} h_j \quad \text{bzw.} \quad F(x) = \sum_{j=1}^{x} f_j
+				 \end{equation*}
+			 \subsubsection*{Stetige Daten}
+				 \begin{equation*}
+					 H(x_k) = \sum_{j=1}^{k} h_j \quad \text{bzw.} \quad F(x) = \int_{-\infty}^{x} f(y) \, dy
+				 \end{equation*}
+				 \begin{itemize}
+					 \item $H(x)$: Summe aller absoluten Häufigkeiten bis Ausprägung $x$
+					 \item Wenn $h$ absolute Häufigkeit, dann heisst $H$ Summenhäufigkeit
+					 \item Wenn $f$ relative Häufigkeit, dann heisst $F$ kumulative Verteilungsfunktion (CDF)
+				 \end{itemize}
 
-  \subsection*{Eigenschaften der PMF und CDF nicht klassierter Daten}
-  \begin{itemize}
-    \item $0 \leq f_i \leq 1$ und $0 \leq F(x) \leq 1$
-    \item $\sum_{i} f_i = 1$ bzw. $F(x_{\max}) = 1$
-    \item $F(x)$ ist monoton wachsend $\Rightarrow F(x_1) \leq F(x_2)$ für $x_1 < x_2$
-    \item $F(x)$ ist rechtsstetig heisst der Wert an der Stelle $x$ ist gleich dem Grenzwert von rechts
-  \end{itemize}
+		 \subsection*{Eigenschaften der PMF und CDF nicht klassierter Daten}
+			 \begin{itemize}
+				 \item $0 \leq f_i \leq 1$ und $0 \leq F(x) \leq 1$
+				 \item $\sum_{i} f_i = 1$ bzw. $F(x_{\max}) = 1$
+				 \item $F(x)$ ist monoton wachsend $\Rightarrow F(x_1) \leq F(x_2)$ für $x_1 < x_2$
+				 \item $F(x)$ ist rechtsstetig heisst der Wert an der Stelle $x$ ist gleich dem Grenzwert von rechts
+			 \end{itemize}
 
-  \subsection*{Eigenschaften der PMF und CDF klassierter Daten}
-  \begin{itemize}
-    \item $0 \leq f_i \leq 1$ und $0 \leq F(x) \leq 1$
-    \item $\int_{-\infty}^{\infty} f(x) \,dx = 1$ und $F'(x) = f(x)$
-    \item Für $x \in K_i$ gilt: $\frac{F(x)-F(a_i)}{b_i} = \frac{F(a_{i+1})-F(a_i)}{b_i} = f_i$
-  \end{itemize}
+		 \subsection*{Eigenschaften der PMF und CDF klassierter Daten}
+			 \begin{itemize}
+				 \item $0 \leq f_i \leq 1$ und $0 \leq F(x) \leq 1$
+				 \item $\int_{-\infty}^{\infty} f(x) \,dx = 1$ und $F'(x) = f(x)$
+				 \item Für $x \in K_i$ gilt: $\frac{F(x)-F(a_i)}{b_i} = \frac{F(a_{i+1})-F(a_i)}{b_i} = f_i$
+			 \end{itemize}
 
-  \subsection*{Klassierte Daten}
-  \begin{itemize}
-    \item Daten werden in Klassen eingeteilt
-    \item Klassenbreite: $b_i = a_{i+1} - a_i$ (mit $a_i$ Klassenuntergrenze)
-    \item Klassenmitte: $M_i = \frac{a_{i+1} + a_i}{2}$ (mit $a_i$ Klassenuntergrenze)
-    \item Dichte: $d_i = \frac{f_i}{b_i}$
-  \end{itemize}
+		 \subsection*{Klassierte Daten}
+			 \begin{itemize}
+				 \item Daten werden in Klassen eingeteilt
+				 \item Klassenbreite: $b_i = a_{i+1} - a_i$ (mit $a_i$ Klassenuntergrenze)
+				 \item Klassenmitte: $M_i = \frac{a_{i+1} + a_i}{2}$ (mit $a_i$ Klassenuntergrenze)
+				 \item Dichte: $d_i = \frac{f_i}{b_i}$
+			 \end{itemize}
 
-  \subsection*{Kenngrössen}
-  {\small
-    \begin{itemize}
-      \item \textbf{Arithmetisches Mittel}:
-            \begin{equation*}
-              \bar{x} = \frac{1}{n} \sum_{i=1}^{n} x_i \quad \text{bzw. wenn klassiert} \quad \bar{x} = \sum_{i=1}^{m} f_i \cdot M_i
-            \end{equation*}
+		 \subsection*{Kenngrössen}
+			 {\small
+				 \begin{itemize}
+					 \item \textbf{Arithmetisches Mittel}:
+					       \begin{equation*}
+						       \bar{x} = \frac{1}{n} \sum_{i=1}^{n} x_i \quad \text{bzw. wenn klassiert} \quad \bar{x} = \sum_{i=1}^{m} f_i \cdot M_i
+					       \end{equation*}
 
-      \item \textbf{Median}:
-            \begin{equation*}
-              \tilde{x} =
-              \begin{cases}
-                x_{\frac{n+1}{2}},                             & n \text{ ungerade} \\
-                \frac{x_{\frac{n}{2}} + x_{\frac{n}{2}+1}}{2}, & n \text{ gerade}
-              \end{cases}
-            \end{equation*}
-            Bei klassierten Daten siehe Lineare Interpolation unten ($Q_{0.5}$).
-      \item \textbf{Modalwert}:
-            \begin{equation*}
-              \hat{x} = x_i \quad \text{mit } h_i = \max(h_1, h_2, \ldots, h_k)
-            \end{equation*}
-      \item \textbf{Varianz}:
-            \begin{equation*}
-              \tilde{s}^2 = \frac{1}{n} \sum_{i=1}^{n} {(x_i - \bar{x})}^2 \quad \text{(bei klassierten Daten $x_i = M_i$)}
-            \end{equation*}
-            \begin{equation*}
-              \tilde{s}^2 = \overline{x^2} - \bar{x}^2 \quad \text{mit} \quad \overline{x^2} = \frac{1}{n} \sum_{i=1}^{n} x_i^2 = \sum_{i=1}^{m} f_i \cdot M_i^2
-            \end{equation*}
-            \begin{equation*}
-              s^2 = \frac{1}{n-1} \sum_{i=1}^{n} {(x_i - \bar{x})}^2 \quad  \text{(bzw.)} \quad s^2 = \frac{n}{n-1} \tilde{s}^2
-            \end{equation*}
-            \begin{equation*}
-              \tilde{s}_{xy} = \overline{xy} - \bar{x} \cdot \bar{y} \quad \text{mit} \quad \overline{xy} = \frac{1}{n} \sum_{i=1}^{n} x_i y_i
-            \end{equation*}
-      \item \textbf{Standardabweichung}:
-            \begin{equation*}
-              s = \sqrt{s^2} \quad \text{bzw.} \quad \tilde{s} = \sqrt{\tilde{s}^2}
-            \end{equation*}
-      \item \textbf{Spannweite}:
-            \begin{equation*}
-              R = x_{\max} - x_{\min}
-            \end{equation*}
-      \item \textbf{Lineare Interpolation}:
-            \begin{equation*}
-              y = y_1 + \frac{(x - x_1)(y_2 - y_1)}{(x_2 - x_1)}
-            \end{equation*}
-            \begin{center}
-              Wenn $F(x)$ gesucht ist: $y_1$ untere CDF, $y_2$ obere CDF \\
-              $x_1$ untere Klassenbegrenzung, $x_2$ obere Klassenbegrenzung \\
-              Wenn $Q_p$ gesucht ist: $y_1$ untere Klassenbegrenzung, $y_2$ obere Klassenbegrenzung \\
-              $x_1$ untere CDF, $x_2$ obere CDF
-            \end{center}
-    \end{itemize}
-  }
+					 \item \textbf{Median}:
+					       \begin{equation*}
+						       \tilde{x} =
+						       \begin{cases}
+							       x_{\frac{n+1}{2}},                             & n \text{ ungerade} \\
+							       \frac{x_{\frac{n}{2}} + x_{\frac{n}{2}+1}}{2}, & n \text{ gerade}
+						       \end{cases}
+					       \end{equation*}
+					       Bei klassierten Daten siehe Lineare Interpolation unten ($Q_{0.5}$).
+					 \item \textbf{Modalwert}:
+					       \begin{equation*}
+						       \hat{x} = x_i \quad \text{mit } h_i = \max(h_1, h_2, \ldots, h_k)
+					       \end{equation*}
+					 \item \textbf{Varianz}:
+					       \begin{equation*}
+						       \tilde{s}^2 = \frac{1}{n} \sum_{i=1}^{n} {(x_i - \bar{x})}^2 \quad \text{(bei klassierten Daten $x_i = M_i$)}
+					       \end{equation*}
+					       \begin{equation*}
+						       \tilde{s}^2 = \overline{x^2} - \bar{x}^2 \quad \text{mit} \quad \overline{x^2} = \frac{1}{n} \sum_{i=1}^{n} x_i^2 = \sum_{i=1}^{m} f_i \cdot M_i^2
+					       \end{equation*}
+					       \begin{equation*}
+						       s^2 = \frac{1}{n-1} \sum_{i=1}^{n} {(x_i - \bar{x})}^2 \quad  \text{(bzw.)} \quad s^2 = \frac{n}{n-1} \tilde{s}^2
+					       \end{equation*}
+					       \begin{equation*}
+						       \tilde{s}_{xy} = \overline{xy} - \bar{x} \cdot \bar{y} \quad \text{mit} \quad \overline{xy} = \frac{1}{n} \sum_{i=1}^{n} x_i y_i
+					       \end{equation*}
+					 \item \textbf{Standardabweichung}:
+					       \begin{equation*}
+						       s = \sqrt{s^2} \quad \text{bzw.} \quad \tilde{s} = \sqrt{\tilde{s}^2}
+					       \end{equation*}
+					 \item \textbf{Spannweite}:
+					       \begin{equation*}
+						       R = x_{\max} - x_{\min}
+					       \end{equation*}
+					 \item \textbf{Lineare Interpolation}:
+					       \begin{equation*}
+						       y = y_1 + \frac{(x - x_1)(y_2 - y_1)}{(x_2 - x_1)}
+					       \end{equation*}
+					       \begin{center}
+						       Wenn $F(x)$ gesucht ist: $y_1$ untere CDF, $y_2$ obere CDF \\
+						       $x_1$ untere Klassenbegrenzung, $x_2$ obere Klassenbegrenzung \\
+						       Wenn $Q_p$ gesucht ist: $y_1$ untere Klassenbegrenzung, $y_2$ obere Klassenbegrenzung \\
+						       $x_1$ untere CDF, $x_2$ obere CDF
+					       \end{center}
+				 \end{itemize}
+			 }
 
-  \subsection*{Kovarianz und Korrelation}
-  \begin{itemize}
-    \item \textbf{Kovarianz}:
-          \begin{equation*}
-            \tilde{s}_{xy} = \text{Cov}(X,Y) = \frac{1}{n} \sum_{i=1}^{n} (x_i - \bar{x})(y_i - \bar{y}) = \overline{xy} - \bar{x} \cdot \bar{y}
-          \end{equation*}
-    \item \textbf{Korrelationskoeffizient nach Pearson}:
-          \begin{equation*}
-            r = \frac{\text{Cov}(X,Y)}{s_X s_Y} = \frac{\tilde{s}_{xy}}{\sqrt{\overline{x^2} - \bar{x}^2} \cdot \sqrt{\overline{y^2} - \bar{y}^2}}
-          \end{equation*}
-    \item $r$ liegt im Intervall $[-1, 1]$
-    \item $r > 0$: positive Korrelation, $r < 0$: negative Korrelation, $r = 0$: keine Korrelation
-    \item $\tilde{s}_{xy}$ und $r$ beschreiben die lineare Abhängigkeit zwischen zwei Merkmalen d.h. wie stark die Merkmale von der Geraden $y = mx + b$ abweichen
-    \item Ist nicht robust gegenüber Ausreissern
-  \end{itemize}
+		 \subsection*{Kovarianz und Korrelation}
+			 \begin{itemize}
+				 \item \textbf{Kovarianz}:
+				       \begin{equation*}
+					       \tilde{s}_{xy} = \text{Cov}(X,Y) = \frac{1}{n} \sum_{i=1}^{n} (x_i - \bar{x})(y_i - \bar{y}) = \overline{xy} - \bar{x} \cdot \bar{y}
+				       \end{equation*}
+				 \item \textbf{Korrelationskoeffizient nach Pearson}:
+				       \begin{equation*}
+					       r = \frac{\text{Cov}(X,Y)}{s_X s_Y} = \frac{\tilde{s}_{xy}}{\sqrt{\overline{x^2} - \bar{x}^2} \cdot \sqrt{\overline{y^2} - \bar{y}^2}}
+				       \end{equation*}
+				 \item $r$ liegt im Intervall $[-1, 1]$
+				 \item $r > 0$: positive Korrelation, $r < 0$: negative Korrelation, $r = 0$: keine Korrelation
+				 \item $\tilde{s}_{xy}$ und $r$ beschreiben die lineare Abhängigkeit zwischen zwei Merkmalen d.h. wie stark die Merkmale von der Geraden $y = mx + b$ abweichen
+				 \item Ist nicht robust gegenüber Ausreissern
+			 \end{itemize}
 
-  \subsection*{Rangkorrelation nach Spearman}
-  \begin{itemize}
-    \item Rang:
-          {\small
-          \begin{equation*}
-            rg(x_i) =
-            \begin{cases}
-              k,                                      & \text{wenn } x_i \text{ der }         \\ & k\text{-te kleinste Wert ist} \\
-              \frac{1}{m} \sum_{j=1}^{m} rg(x_{i_j}), & \text{bei } m \text{ gleichen Werten}
-            \end{cases}
-          \end{equation*}
-          }
-    \item Korrelationskoeffizient nach Spearman:
-          \begin{equation*}
-            r_s = \frac{\sum_{i=1}^{n} (rg(x_i) - \overline{rg(x)})(rg(y_i) - \overline{rg(y)})}{\sqrt{\sum_{i=1}^{n} (rg(x_i) - \overline{rg(x)})^2} \cdot \sqrt{\sum_{i=1}^{n} (rg(y_i) - \overline{rg(y)})^2}}
-          \end{equation*}
-    \item $r_s$ beschreibt die monotone Abhängigkeit zwischen zwei Merkmalen
-    \item Ist robust gegenüber Ausreissern
-  \end{itemize}
+		 \subsection*{Rangkorrelation nach Spearman}
+			 \begin{itemize}
+				 \item Rang:
+				       {\small
+				       \begin{equation*}
+					       rg(x_i) =
+					       \begin{cases}
+						       k,                                      & \text{wenn } x_i \text{ der }         \\ & k\text{-te kleinste Wert ist} \\
+						       \frac{1}{m} \sum_{j=1}^{m} rg(x_{i_j}), & \text{bei } m \text{ gleichen Werten}
+					       \end{cases}
+				       \end{equation*}
+				       }
+				 \item Korrelationskoeffizient nach Spearman:
+				       \begin{equation*}
+					       r_s = \frac{\sum_{i=1}^{n} (rg(x_i) - \overline{rg(x)})(rg(y_i) - \overline{rg(y)})}{\sqrt{\sum_{i=1}^{n} (rg(x_i) - \overline{rg(x)})^2} \cdot \sqrt{\sum_{i=1}^{n} (rg(y_i) - \overline{rg(y)})^2}}
+				       \end{equation*}
+				 \item $r_s$ beschreibt die monotone Abhängigkeit zwischen zwei Merkmalen
+				 \item Ist robust gegenüber Ausreissern
+			 \end{itemize}
 
-  \section*{Kombinatorik}
-  \subsection*{Grundlagen}
-  {\small
-    \begin{itemize}
-      \item \textbf{Multiplikationsregel}: Wenn ein Vorgang in $m$ Arten und ein zweiter Vorgang in $n$ Arten durchgeführt werden kann, dann können beide Vorgänge in $m \cdot n$ Arten durchgeführt werden.
-      \item \textbf{Additionsregel}: Wenn ein Vorgang in $m$ Arten und ein zweiter Vorgang in $n$ Arten durchgeführt werden kann, und beide Vorgänge sich gegenseitig ausschließen, dann können beide Vorgänge in $m + n$ Arten durchgeführt werden.
-    \end{itemize}
+		\section*{Kombinatorik}
+		 \subsection*{Grundlagen}
+			 {\small
+			 \begin{itemize}
+				 \item \textbf{Multiplikationsregel}: Wenn ein Vorgang in $m$ Arten und ein zweiter Vorgang in $n$ Arten durchgeführt werden kann, dann können beide Vorgänge in $m \cdot n$ Arten durchgeführt werden.
+				 \item \textbf{Additionsregel}: Wenn ein Vorgang in $m$ Arten und ein zweiter Vorgang in $n$ Arten durchgeführt werden kann, und beide Vorgänge sich gegenseitig ausschließen, dann können beide Vorgänge in $m + n$ Arten durchgeführt werden.
+			 \end{itemize}
 
-    \subsection*{Binomialkoeffizient}
-    \begin{equation*}
-      \binom{n}{k} = \frac{n!}{k!(n-k)!}
-    \end{equation*}
-    \begin{itemize}
-      \item Anzahl der Möglichkeiten, aus $n$ Elementen $k$ Elemente ohne Zurücklegen und ohne Beachtung der Reihenfolge auszuwählen
-      \item $n$: Gesamtanzahl der Elemente
-      \item $k$: Anzahl der auszuwählenden Elemente
-      \item $\binom{n}{0} = 1$, $\binom{n}{n} = 1$, $\binom{n}{1} = n$
-      \item Symmetrie: $\binom{n}{k} = \binom{n}{n-k}$
-      \item Rekursion: $\binom{n}{k} = \binom{n-1}{k-1} + \binom{n-1}{k}$
-      \item Binomischer Lehrsatz: $(x + y)^n = \sum_{k=0}^{n} \binom{n}{k} x^{n-k} y^k$
-      \item Summe der Binomialkoeffizienten: $\sum_{k=0}^{n} \binom{n}{k} = 2^n$
-    \end{itemize}
+		 \subsection*{Binomialkoeffizient}
+			 \begin{equation*}
+				 \binom{n}{k} = \frac{n!}{k!(n-k)!}
+			 \end{equation*}
+			 \begin{itemize}
+				 \item Anzahl der Möglichkeiten, aus $n$ Elementen $k$ Elemente ohne Zurücklegen und ohne Beachtung der Reihenfolge auszuwählen
+				 \item $n$: Gesamtanzahl der Elemente
+				 \item $k$: Anzahl der auszuwählenden Elemente
+				 \item $\binom{n}{0} = 1$, $\binom{n}{n} = 1$, $\binom{n}{1} = n$
+				 \item Symmetrie: $\binom{n}{k} = \binom{n}{n-k}$
+				 \item Rekursion: $\binom{n}{k} = \binom{n-1}{k-1} + \binom{n-1}{k}$
+				 \item Binomischer Lehrsatz: $(x + y)^n = \sum_{k=0}^{n} \binom{n}{k} x^{n-k} y^k$
+				 \item Summe der Binomialkoeffizienten: $\sum_{k=0}^{n} \binom{n}{k} = 2^n$
+			 \end{itemize}
 
-    \begin{center}
-      \textbf{Kombinatorische Auswahlmöglichkeiten}
-    \end{center}
+			 \begin{center}
+				 \textbf{Kombinatorische Auswahlmöglichkeiten}
+			 \end{center}
 
-    \setlength{\tabcolsep}{9pt}
-    \renewcommand{\arraystretch}{1.3}
-    \begin{tabular}{|>{\centering\arraybackslash}m{0.28\linewidth}
-      |>{\centering\arraybackslash}m{0.28\linewidth}
-      |>{\centering\arraybackslash}m{0.28\linewidth}|}
-      \hline
-                                & \textbf{Mit Zurücklegen} & \textbf{Ohne Zurücklegen} \\ \hline
-      \textbf{Mit Reihenfolge}  & $n^k$                    & $\frac{n!}{(n-k)!}$       \\
-                                & \textit{Zahlenschloss}   & \textit{Rennen}           \\ \hline
+			 \setlength{\tabcolsep}{9pt}
+			 \renewcommand{\arraystretch}{1.3}
+			 \begin{tabular}{|>{\centering\arraybackslash}m{0.28\linewidth}
+				 |>{\centering\arraybackslash}m{0.28\linewidth}
+				 |>{\centering\arraybackslash}m{0.28\linewidth}|}
+				 \hline
+				                           & \textbf{Mit Zurücklegen} & \textbf{Ohne Zurücklegen} \\ \hline
+				 \textbf{Mit Reihenfolge}  & $n^k$                    & $\frac{n!}{(n-k)!}$       \\
+				                           & \textit{Zahlenschloss}   & \textit{Rennen}           \\ \hline
 
-      \textbf{Ohne Reihenfolge} & $\binom{n+k-1}{k}$       & $\binom{n}{k}$            \\
-                                & \textit{Warenwahl}       & \textit{Gruppenwahl}      \\ \hline
-    \end{tabular}
+				 \textbf{Ohne Reihenfolge} & $\binom{n+k-1}{k}$       & $\binom{n}{k}$            \\
+				                           & \textit{Warenwahl}       & \textit{Gruppenwahl}      \\ \hline
+			 \end{tabular}
 
-    \begin{itemize}
-      \item Multiplizieren der Warscheinlichkeiten bei:
-            \begin{itemize}
-              \item Unabhängigen Ereignissen (Ziehen mit Zurücklegen)
-            \end{itemize}
-      \item Addieren der Warscheinlichkeiten bei:
-            \begin{itemize}
-              \item Sich gegenseitig ausschliessenden Ereignissen
-            \end{itemize}
-    \end{itemize}
-  }
-  \section*{Elementare Wahrscheinlichkeitsrechnung}
-  \subsection*{Begriffe}
-  \begin{itemize}
-    \item \textbf{Experiment}: Vorgang, der zu einem Ergebnis führt
-    \item \textbf{Ergebnis}: Resultat eines Experiments
-    \item \textbf{Ergebnismenge} ($\Omega$): Menge aller möglichen Ergebnisse eines Experiments
-    \item \textbf{Ereignis} ($A$): Teilmenge der Ergebnismenge
-    \item \textbf{Sicheres Ereignis}: Ereignis, das immer eintritt ($A = \Omega$)
-    \item \textbf{Unmögliches Ereignis}: Ereignis, das nie eintritt ($A = \emptyset$)
-  \end{itemize}
+			 \begin{itemize}
+				 \item Multiplizieren der Warscheinlichkeiten bei:
+				       \begin{itemize}
+					       \item Unabhängigen Ereignissen (Ziehen mit Zurücklegen)
+				       \end{itemize}
+				 \item Addieren der Warscheinlichkeiten bei:
+				       \begin{itemize}
+					       \item Sich gegenseitig ausschliessenden Ereignissen
+				       \end{itemize}
+			 \end{itemize}
+			 }
+		\section*{Elementare Wahrscheinlichkeitsrechnung}
+		 \subsection*{Begriffe}
+			 \begin{itemize}
+				 \item \textbf{Experiment}: Vorgang, der zu einem Ergebnis führt
+				 \item \textbf{Ergebnis}: Resultat eines Experiments
+				 \item \textbf{Ergebnismenge} ($\Omega$): Menge aller möglichen Ergebnisse eines Experiments
+				 \item \textbf{Ereignis} ($A$): Teilmenge der Ergebnismenge
+				 \item \textbf{Sicheres Ereignis}: Ereignis, das immer eintritt ($A = \Omega$)
+				 \item \textbf{Unmögliches Ereignis}: Ereignis, das nie eintritt ($A = \emptyset$)
+			 \end{itemize}
 
-  \subsection*{Diskrete Wahrscheinlichkeitsräume}
-  \begin{itemize}
-    \item \textbf{Laplace-Experiment}: Experiment mit endlicher Ergebnismenge, bei dem alle Ergebnisse gleich wahrscheinlich sind
-    \item \textbf{Wahrscheinlichkeit eines Ereignisses}:
-          \begin{equation*}
-            P(A) = \frac{|A|}{|\Omega|}
-          \end{equation*}
-    \item \textbf{Axiome der Wahrscheinlichkeitsrechnung}:
-          \begin{itemize}
-            \item $0 \leq P(A) \leq 1$ für jedes Ereignis $A$
-            \item $P(\Omega) = 1$
-            \item Für paarweise disjunkte Ereignisse $A_1, A_2, \ldots$ gilt: $P\left(\bigcup_{i} A_i\right) = \sum_{i} P(A_i)$
-            \item Wenn nicht disjunkt: $P(A \cup B) = P(A) + P(B) - P(A \cap B)$
-            \item Komplementregel: $P(\Omega \backslash A) = 1 - P(A)$
-          \end{itemize}
-  \end{itemize}
+		 \subsection*{Diskrete Wahrscheinlichkeitsräume}
+			 \begin{itemize}
+				 \item \textbf{Laplace-Experiment}: Experiment mit endlicher Ergebnismenge, bei dem alle Ergebnisse gleich wahrscheinlich sind
+				 \item \textbf{Wahrscheinlichkeit eines Ereignisses}:
+				       \begin{equation*}
+					       P(A) = \frac{|A|}{|\Omega|}
+				       \end{equation*}
+				 \item \textbf{Axiome der Wahrscheinlichkeitsrechnung}:
+				       \begin{itemize}
+					       \item $0 \leq P(A) \leq 1$ für jedes Ereignis $A$
+					       \item $P(\Omega) = 1$
+					       \item Für paarweise disjunkte Ereignisse $A_1, A_2, \ldots$ gilt: $P\left(\bigcup_{i} A_i\right) = \sum_{i} P(A_i)$
+					       \item Wenn nicht disjunkt: $P(A \cup B) = P(A) + P(B) - P(A \cap B)$
+					       \item Komplementregel: $P(\Omega \backslash A) = 1 - P(A)$
+				       \end{itemize}
+			 \end{itemize}
 
-  \subsection*{Lage- und Streumasse}
-  \begin{itemize}
-    \item \textbf{Lagemasse}: Beschreiben die zentrale Tendenz einer Verteilung
-    \item \textbf{Streumasse}: Beschreiben die Variabilität oder Streuung der Daten
-    \item \textbf{Erwartungswert}:
-          \begin{equation*}
-            \mu = E(X) = \sum_{i} x_i \cdot P(X = x_i)
-          \end{equation*}
-    \item \textbf{Varianz}:
-          \begin{equation*}
-            \sigma^2 = Var(X) = \sum_{i} (x_i - \mu)^2 \cdot P(X = x_i) = E(X^2) - \mu^2
-          \end{equation*}
-    \item \textbf{Standardabweichung}:
-          \begin{equation*}
-            \sigma = \sqrt{Var(X)}
-          \end{equation*}
-  \end{itemize}
+		 \subsection*{Lage- und Streumasse}
+			 \begin{itemize}
+				 \item \textbf{Lagemasse}: Beschreiben die zentrale Tendenz einer Verteilung
+				 \item \textbf{Streumasse}: Beschreiben die Variabilität oder Streuung der Daten
+				 \item \textbf{Erwartungswert}:
+				       \begin{equation*}
+					       \mu = E(X) = \sum_{i} x_i \cdot P(X = x_i)
+				       \end{equation*}
+				 \item \textbf{Varianz}:
+				       \begin{equation*}
+					       \sigma^2 = Var(X) = \sum_{i} (x_i - \mu)^2 \cdot P(X = x_i) = E(X^2) - \mu^2
+				       \end{equation*}
+				 \item \textbf{Standardabweichung}:
+				       \begin{equation*}
+					       \sigma = \sqrt{Var(X)}
+				       \end{equation*}
+			 \end{itemize}
 
-  \subsection*{Bedingte Wahrscheinlichkeiten}
-  \begin{itemize}
-    \item \textbf{Bedingte Wahrscheinlichkeit}:
-          \begin{equation*}
-            P(A|B) = \frac{P(A \cap B)}{P(B)} \quad \text{für } P(B) > 0
-          \end{equation*}
-    \item \textbf{Multiplikationssatz}:
-          \begin{equation*}
-            P(A \cap B) = P(A|B) \cdot P(B) = P(B|A) \cdot P(A)
-          \end{equation*}
-    \item \textbf{Totale Wahrscheinlichkeit}:
-          \begin{equation*}
-            P(A) = P(A|B) \cdot P(B) + P(A|\overline{B}) \cdot P(\overline{B})
-          \end{equation*}
-    \item \textbf{Satz von Bayes}:
-          \begin{equation*}
-            P(A|B) = \frac{P(B|A) \cdot P(A)}{P(B)}
-          \end{equation*}
-  \end{itemize}
-  \includegraphics[width=\linewidth]{assets/Wahrscheinlichkeitsbaum.png}
+		 \subsection*{Bedingte Wahrscheinlichkeiten}
+			 \begin{itemize}
+				 \item \textbf{Bedingte Wahrscheinlichkeit}:
+				       \begin{equation*}
+					       P(A|B) = \frac{P(A \cap B)}{P(B)} \quad \text{für } P(B) > 0
+				       \end{equation*}
+				 \item \textbf{Multiplikationssatz}:
+				       \begin{equation*}
+					       P(A \cap B) = P(A|B) \cdot P(B) = P(B|A) \cdot P(A)
+				       \end{equation*}
+				 \item \textbf{Totale Wahrscheinlichkeit}:
+				       \begin{equation*}
+					       P(A) = P(A|B) \cdot P(B) + P(A|\overline{B}) \cdot P(\overline{B})
+				       \end{equation*}
+				 \item \textbf{Satz von Bayes}:
+				       \begin{equation*}
+					       P(A|B) = \frac{P(B|A) \cdot P(A)}{P(B)}
+				       \end{equation*}
+			 \end{itemize}
+			 \includegraphics[width=\linewidth]{assets/Wahrscheinlichkeitsbaum.png}
 
-  \subsection*{Stockhastische Unabhängigkeit}
-  \begin{itemize}
-    \item Zwei Ereignisse $A$ und $B$ sind stochastisch unabhängig, wenn gilt:
-          \begin{equation*}
-            P(A \cap B) = P(A) \cdot P(B)
-          \end{equation*}
-    \item Äquivalent dazu:
-          \begin{equation*}
-            P(A|B) = P(A) \quad \text{oder} \quad P(B|A) = P(B)
-          \end{equation*}
-    \item Mehrere Ereignisse $A_1, A_2, \ldots, A_n$ sind stochastisch unabhängig, wenn für jede Teilmenge $I \subseteq \{1, 2, \ldots, n\}$ gilt:
-          \begin{equation*}
-            P\left(\bigcap_{i \in I} A_i\right) = \prod_{i \in I} P(A_i)
-          \end{equation*}
-    \item Die Funktion $f(x,y) = P(X=x, Y=y)$ heisst gemeinsame Verteilung von $X$ und $Y$
-    \item Zufallsvariablen $X$ und $Y$ sind stochastisch unabhängig, wenn für alle $x$ und $y$ gilt:
-          \begin{equation*}
-            P(X=x, Y=y) = P(X=x) \cdot P(Y=y)
-          \end{equation*}
-  \end{itemize}
-  \subsubsection*{Für stochastisch unabhängige Zufallsvariablen gilt:}
-  \begin{itemize}
-    \item $E(XY) = E(X) \cdot E(Y)$
-    \item $Var(X + Y) = Var(X) + Var(Y)$
-  \end{itemize}
+		 \subsection*{Stockhastische Unabhängigkeit}
+			 \begin{itemize}
+				 \item Zwei Ereignisse $A$ und $B$ sind stochastisch unabhängig, wenn gilt:
+				       \begin{equation*}
+					       P(A \cap B) = P(A) \cdot P(B)
+				       \end{equation*}
+				 \item Äquivalent dazu:
+				       \begin{equation*}
+					       P(A|B) = P(A) \quad \text{oder} \quad P(B|A) = P(B)
+				       \end{equation*}
+				 \item Mehrere Ereignisse $A_1, A_2, \ldots, A_n$ sind stochastisch unabhängig, wenn für jede Teilmenge $I \subseteq \{1, 2, \ldots, n\}$ gilt:
+				       \begin{equation*}
+					       P\left(\bigcap_{i \in I} A_i\right) = \prod_{i \in I} P(A_i)
+				       \end{equation*}
+				 \item Die Funktion $f(x,y) = P(X=x, Y=y)$ heisst gemeinsame Verteilung von $X$ und $Y$
+				 \item Zufallsvariablen $X$ und $Y$ sind stochastisch unabhängig, wenn für alle $x$ und $y$ gilt:
+				       \begin{equation*}
+					       P(X=x, Y=y) = P(X=x) \cdot P(Y=y)
+				       \end{equation*}
+			 \end{itemize}
+			 \subsubsection*{Für stochastisch unabhängige Zufallsvariablen gilt:}
+				 \begin{itemize}
+					 \item $E(XY) = E(X) \cdot E(Y)$
+					 \item $Var(X + Y) = Var(X) + Var(Y)$
+				 \end{itemize}
 
-  \section*{Spezielle Verteilungen}
-  \subsection*{Die Hypergeometrische Verteilung}
-  \begin{itemize}
-    \item Diskrete Verteilung
-    \item Modelliert die Anzahl der Erfolge in einer Stichprobe ohne Zurücklegen
-    \item Parameter: $N$ (Gesamtanzahl), $K$ (Anzahl der Erfolge in der Grundgesamtheit), $n$ (Stichprobengröße)
-    \item Kann bei $n \leq \frac{N}{20}$ durch die Binomialverteilung approximiert werden: $H(N, K, n) \approx B\left(n, \frac{K}{N}\right)$
-    \item Wahrscheinlichkeitsfunktion:
-          \begin{equation*}
-            P(X = k) = \frac{\binom{K}{k} \binom{N-K}{n-k}}{\binom{N}{n}}
-          \end{equation*}
-    \item Erwartungswert: $E(X) = n \cdot \frac{K}{N}$
-    \item Varianz: $Var(X) = n \cdot \frac{K}{N} \cdot \left(1 - \frac{K}{N} \right) \cdot \frac{N-n}{N-1}$
-  \end{itemize}
+		\section*{Spezielle Verteilungen}
+		 \subsection*{Die Hypergeometrische Verteilung}
+			 \begin{itemize}
+				 \item Diskrete Verteilung
+				 \item Modelliert die Anzahl der Erfolge in einer Stichprobe ohne Zurücklegen
+				 \item Parameter: $N$ (Gesamtanzahl), $K$ (Anzahl der Erfolge in der Grundgesamtheit), $n$ (Stichprobengröße)
+				 \item Kann bei $n \leq \frac{N}{20}$ durch die Binomialverteilung approximiert werden: $H(N, K, n) \approx B\left(n, \frac{K}{N}\right)$
+				 \item Wahrscheinlichkeitsfunktion:
+				       \begin{equation*}
+					       P(X = k) = \frac{\binom{K}{k} \binom{N-K}{n-k}}{\binom{N}{n}}
+				       \end{equation*}
+				 \item Erwartungswert: $E(X) = n \cdot \frac{K}{N}$
+				 \item Varianz: $Var(X) = n \cdot \frac{K}{N} \cdot \left(1 - \frac{K}{N} \right) \cdot \frac{N-n}{N-1}$
+			 \end{itemize}
 
-  \subsection*{Die Bernoulli-Verteilung}
-  \begin{itemize}
-    \item Diskrete Verteilung
-    \item Modelliert ein Experiment mit zwei möglichen Ergebnissen (Erfolg oder Misserfolg)
-    \item Parameter: $p$ (Wahrscheinlichkeit für Erfolg)
-    \item Wahrscheinlichkeitsfunktion:
-          \begin{equation*}
-            P(X = 1) = p, \quad P(X = 0) = 1 - p
-          \end{equation*}
-    \item Erwartungswert: $E(X) = E(X^2) = p$
-    \item Varianz: $Var(X) = p(1 - p)$
-  \end{itemize}
+		 \subsection*{Die Bernoulli-Verteilung}
+			 \begin{itemize}
+				 \item Diskrete Verteilung
+				 \item Modelliert ein Experiment mit zwei möglichen Ergebnissen (Erfolg oder Misserfolg)
+				 \item Parameter: $p$ (Wahrscheinlichkeit für Erfolg)
+				 \item Wahrscheinlichkeitsfunktion:
+				       \begin{equation*}
+					       P(X = 1) = p, \quad P(X = 0) = 1 - p
+				       \end{equation*}
+				 \item Erwartungswert: $E(X) = E(X^2) = p$
+				 \item Varianz: $Var(X) = p(1 - p)$
+			 \end{itemize}
 
-  \subsection*{Die Binomialverteilung}
-  \begin{itemize}
-    \item Diskrete Verteilung
-    \item Modelliert die Anzahl der Erfolge in einer Serie von unabhängigen Bernoulli-Experimenten
-    \item Parameter: $n$ (Anzahl der Experimente), $p$ (Wahrscheinlichkeit für Erfolg)
-    \item Kann bei $n \geq 50$ und $p \leq 0.1$ durch die Poisson-Verteilung approximiert werden: $B(n, p) \approx P(\lambda = n \cdot p)$
-    \item Wahrscheinlichkeitsfunktion:
-          \begin{equation*}
-            P(X = k) = \binom{n}{k} p^k (1 - p)^{n-k}
-          \end{equation*}
-    \item Erwartungswert: $E(X) = n \cdot p$
-    \item Varianz: $Var(X) = n \cdot p \cdot (1 - p)$
-  \end{itemize}
+		 \subsection*{Die Binomialverteilung}
+			 \begin{itemize}
+				 \item Diskrete Verteilung
+				 \item Modelliert die Anzahl der Erfolge in einer Serie von unabhängigen Bernoulli-Experimenten
+				 \item Parameter: $n$ (Anzahl der Experimente), $p$ (Wahrscheinlichkeit für Erfolg)
+				 \item Kann bei $n \geq 50$ und $p \leq 0.1$ durch die Poisson-Verteilung approximiert werden: $B(n, p) \approx P(\lambda = n \cdot p)$
+				 \item Wahrscheinlichkeitsfunktion:
+				       \begin{equation*}
+					       P(X = k) = \binom{n}{k} p^k (1 - p)^{n-k}
+				       \end{equation*}
+				 \item Erwartungswert: $E(X) = n \cdot p$
+				 \item Varianz: $Var(X) = n \cdot p \cdot (1 - p)$
+			 \end{itemize}
 
-  \subsection*{Die Poisson-Verteilung}
-  \begin{itemize}
-    \item Diskrete Verteilung
-    \item Modelliert die Anzahl der Ereignisse in einem festen Intervall, wenn die Ereignisse unabhängig und mit konstanter Rate auftreten
-    \item Parameter: $\lambda$ (durchschnittliche Anzahl der Ereignisse pro Intervall)
-    \item Wahrscheinlichkeitsfunktion:
-          \begin{equation*}
-            P(X = k) = \frac{\lambda^k e^{-\lambda}}{k!}
-          \end{equation*}
-    \item Erwartungswert: $E(X) = \lambda$
-    \item Varianz: $Var(X) = \lambda$
-  \end{itemize}
+		 \subsection*{Die Poisson-Verteilung}
+			 \begin{itemize}
+				 \item Diskrete Verteilung
+				 \item Modelliert die Anzahl der Ereignisse in einem festen Intervall, wenn die Ereignisse unabhängig und mit konstanter Rate auftreten
+				 \item Parameter: $\lambda$ (durchschnittliche Anzahl der Ereignisse pro Intervall)
+				 \item Wahrscheinlichkeitsfunktion:
+				       \begin{equation*}
+					       P(X = k) = \frac{\lambda^k e^{-\lambda}}{k!}
+				       \end{equation*}
+				 \item Erwartungswert: $E(X) = \lambda$
+				 \item Varianz: $Var(X) = \lambda$
+			 \end{itemize}
 
-  \subsection*{Die Exponentialverteilung}
-  \begin{itemize}
-    \item Stetige Verteilung
-    \item Modelliert die Zeit zwischen Ereignissen in einem Poisson-Prozess
-    \item Parameter: $\lambda$ (Ereignisrate)
-    \item Wahrscheinlichkeitsdichtefunktion:
-          \begin{equation*}
-            f(x) = \lambda e^{-\lambda x} \quad \text{für } x \geq 0
-          \end{equation*}
-    \item Kumulative Verteilungsfunktion:
-          \begin{equation*}
-            F(x) = P(X \leq x) = 1 - e^{-\lambda x} \quad \text{für } x \geq 0
-          \end{equation*}
-    \item Erwartungswert: $E(X) = \frac{1}{\lambda}$
-    \item Varianz: $Var(X) = \frac{1}{\lambda^2}$
-    \item Gedächtnislosigkeit: $P(X > s + t | X > s) = P(X > t)$
-  \end{itemize}
+		 \subsection*{Die Exponentialverteilung}
+			 \begin{itemize}
+				 \item Stetige Verteilung
+				 \item Modelliert die Zeit zwischen Ereignissen in einem Poisson-Prozess
+				 \item Parameter: $\lambda$ (Ereignisrate)
+				 \item Wahrscheinlichkeitsdichtefunktion:
+				       \begin{equation*}
+					       f(x) = \lambda e^{-\lambda x} \quad \text{für } x \geq 0
+				       \end{equation*}
+				 \item Kumulative Verteilungsfunktion:
+				       \begin{equation*}
+					       F(x) = P(X \leq x) = 1 - e^{-\lambda x} \quad \text{für } x \geq 0
+				       \end{equation*}
+				 \item Erwartungswert: $E(X) = \frac{1}{\lambda}$
+				 \item Varianz: $Var(X) = \frac{1}{\lambda^2}$
+				 \item Gedächtnislosigkeit: $P(X > s + t | X > s) = P(X > t)$
+			 \end{itemize}
 
-  \subsection*{Gauss'sche Normalverteilung}
-  \begin{itemize}
-    \item Stetige Verteilung
-    \item Modelliert viele natürliche Phänomene (z.B. Messfehler, Körpergrößen)
-    \item Parameter: $\mu$ (Erwartungswert), $\sigma$ (Standardabweichung)
-    \item Wahrscheinlichkeitsdichtefunktion:
-          \begin{equation*}
-            f(x) = \frac{1}{\sigma \sqrt{2\pi}} e^{-\frac{(x - \mu)^2}{2\sigma^2}}
-          \end{equation*}
-    \item Kumulative Verteilungsfunktion:
-          \begin{equation*}
-            \phi_{\mu, \sigma}(x) = P(X \leq x) = \frac{1}{\sigma \sqrt{2\pi}} \int_{-\infty}^{x} e^{-\frac{(t - \mu)^2}{2\sigma^2}} dt
-          \end{equation*}
-    \item Erwartungswert: $E(X) = \mu$
-    \item Varianz: $Var(X) = \sigma^2$
-    \item Standardnormalverteilung: $\mu = 0$, $\sigma = 1$
-    \item Standardisierung: $Z = \frac{X - \mu}{\sigma}$
-    \item Zentraler Grenzwertsatz: Summe vieler unabhängiger Zufallsvariablen nähert sich einer Normalverteilung an
-  \end{itemize}
-  \includegraphics[width=0.9\linewidth]{assets/Normalverteilung.png}
+		 \subsection*{Gauss'sche Normalverteilung}
+			 \begin{itemize}
+				 \item Stetige Verteilung
+				 \item Modelliert viele natürliche Phänomene (z.B. Messfehler, Körpergrößen)
+				 \item Parameter: $\mu$ (Erwartungswert), $\sigma$ (Standardabweichung)
+				 \item Wahrscheinlichkeitsdichtefunktion:
+				       \begin{equation*}
+					       f(x) = \frac{1}{\sigma \sqrt{2\pi}} e^{-\frac{(x - \mu)^2}{2\sigma^2}}
+				       \end{equation*}
+				 \item Kumulative Verteilungsfunktion:
+				       \begin{equation*}
+					       \phi_{\mu, \sigma}(x) = P(X \leq x) = \frac{1}{\sigma \sqrt{2\pi}} \int_{-\infty}^{x} e^{-\frac{(t - \mu)^2}{2\sigma^2}} dt
+				       \end{equation*}
+				 \item Erwartungswert: $E(X) = \mu$
+				 \item Varianz: $Var(X) = \sigma^2$
+				 \item Standardnormalverteilung: $\mu = 0$, $\sigma = 1$
+				 \item Standardisierung: $Z = \frac{X - \mu}{\sigma}$
+				 \item Zentraler Grenzwertsatz: Summe vieler unabhängiger Zufallsvariablen nähert sich einer Normalverteilung an
+			 \end{itemize}
+			 \includegraphics[width=0.9\linewidth]{assets/Normalverteilung.png}
 
-  \section*{Regression}
-  \begin{itemize}
-    \item Gegeben: Datenpunkte $(x_i, y_i)$ für $i = 1, 2, \ldots, n$
-    \item Residuen / Fehler: $\epsilon_i = y_i - \hat{y}_i$ mit $\hat{y}_i$ als geschätzter Wert
-    \item Ziel: Funktion $f(x)$ finden, die die Datenpunkte bestmöglich beschreibt
-  \end{itemize}
-  \subsection*{Regressionsgerade}
-  \begin{itemize}
-    \item Lineare Regression: $f(x) = a x + b$
-    \item Korrelationskoeffizient (nach Pearson):
-          \begin{equation*}
-            r_{xy} = \frac{\sum_{i=1}^{n} (x_i - \bar{x})(y_i - \bar{y})}{\sqrt{\sum_{i=1}^{n} (x_i - \bar{x})^2} \cdot \sqrt{\sum_{i=1}^{n} (y_i - \bar{y})^2}} \approx \frac{\tilde{s}_{xy}}{\tilde{s}_x \tilde{s}_y}
-          \end{equation*}
-    \item Lösungen:
-          \begin{equation*}
-            a = \frac{\tilde{s}_{xy}}{\tilde{s}_x^2} \quad \text{(Geht auch mit den korrigierten Varianzen)}
-          \end{equation*}
-          \begin{equation*}
-            b = \bar{y} - a \bar{x}
-          \end{equation*}
-          \begin{equation*}
-            \tilde{s}_{\epsilon}^2 = \tilde{s}_y^2 - \underbrace{\frac{\tilde{s}_{xy}^2}{\tilde{s}_x^2}}_{\tilde{s}_{\hat{y}}^2} \quad \text{(Varianz der Residuen)}
-          \end{equation*}
-    \item Totale Varianz:
-          \begin{equation*}
-            \tilde{s}_y^2 = \tilde{s}_{\hat{y}}^2 + \tilde{s}_{\epsilon}^2
-          \end{equation*}
-    \item Bestimmtheitsmass:
-          \begin{equation*}
-            R^2 = \frac{\tilde{s}_{\hat{y}}^2}{\tilde{s}_y^2} = r^2_{xy}
-          \end{equation*}
-    \item $R^2$ gibt an, wie gut die Regressionsgerade die Daten beschreibt (0 bis 1 grösser ist besser)
-  \end{itemize}
+		\section*{Regression}
+		 \begin{itemize}
+			 \item Gegeben: Datenpunkte $(x_i, y_i)$ für $i = 1, 2, \ldots, n$
+			 \item Residuen / Fehler: $\epsilon_i = y_i - \hat{y}_i$ mit $\hat{y}_i$ als geschätzter Wert
+			 \item Ziel: Funktion $f(x)$ finden, die die Datenpunkte bestmöglich beschreibt
+		 \end{itemize}
+		 \subsection*{Regressionsgerade}
+			 \begin{itemize}
+				 \item Lineare Regression: $f(x) = a x + b$
+				 \item Korrelationskoeffizient (nach Pearson):
+				       \begin{equation*}
+					       r_{xy} = \frac{\sum_{i=1}^{n} (x_i - \bar{x})(y_i - \bar{y})}{\sqrt{\sum_{i=1}^{n} (x_i - \bar{x})^2} \cdot \sqrt{\sum_{i=1}^{n} (y_i - \bar{y})^2}} \approx \frac{\tilde{s}_{xy}}{\tilde{s}_x \tilde{s}_y}
+				       \end{equation*}
+				 \item Lösungen:
+				       \begin{equation*}
+					       a = \frac{\tilde{s}_{xy}}{\tilde{s}_x^2} \quad \text{(Geht auch mit den korrigierten Varianzen)}
+				       \end{equation*}
+				       \begin{equation*}
+					       b = \bar{y} - a \bar{x}
+				       \end{equation*}
+				       \begin{equation*}
+					       \tilde{s}_{\epsilon}^2 = \tilde{s}_y^2 - \underbrace{\frac{\tilde{s}_{xy}^2}{\tilde{s}_x^2}}_{\tilde{s}_{\hat{y}}^2} \quad \text{(Varianz der Residuen)}
+				       \end{equation*}
+				 \item Totale Varianz:
+				       \begin{equation*}
+					       \tilde{s}_y^2 = \tilde{s}_{\hat{y}}^2 + \tilde{s}_{\epsilon}^2
+				       \end{equation*}
+				 \item Bestimmtheitsmass:
+				       \begin{equation*}
+					       R^2 = \frac{\tilde{s}_{\hat{y}}^2}{\tilde{s}_y^2} = r^2_{xy}
+				       \end{equation*}
+				 \item $R^2$ gibt an, wie gut die Regressionsgerade die Daten beschreibt (0 bis 1 grösser ist besser)
+			 \end{itemize}
 
-  \subsection*{Bestimmung der Regressionsparameter mittels Matrix}
-  \begin{itemize}
-    \item Datenpunkte in Vektorform:
-          \begin{equation*}
-            \mathbf{y} =
-            \begin{pmatrix}
-              y_1    \\
-              y_2    \\
-              \vdots \\
-              y_n
-            \end{pmatrix}, \quad
-            \mathbf{A} =
-            \begin{pmatrix}
-              1      & x_1    \\
-              1      & x_2    \\
-              \vdots & \vdots \\
-              1      & x_n
-            \end{pmatrix}
-          \end{equation*}
-    \item Regressionsparameter in Vektorform:
-          \begin{equation*}
-            \mathbf{b} =
-            \begin{pmatrix}
-              b \\
-              a
-            \end{pmatrix}
-          \end{equation*}
-    \item Normalengleichung:
-          \begin{equation*}
-            \mathbf{A}^T \mathbf{A} \mathbf{b} = \mathbf{A}^T \mathbf{y}
-          \end{equation*}
-    \item Lösung:
-          \begin{equation*}
-            \mathbf{b} = (\mathbf{A}^T \mathbf{A})^{-1} \mathbf{A}^T \mathbf{y}
-          \end{equation*}
-    \item Residuenvektor:
-          \begin{equation*}
-            \vec{\mathbf{\epsilon}} = \vec{\mathbf{y}} - \mathbf{A} \vec{\mathbf{b}}
-          \end{equation*}
-  \end{itemize}
+		 \subsection*{Bestimmung der Regressionsparameter mittels Matrix}
+			 \begin{itemize}
+				 \item Datenpunkte in Vektorform:
+				       \begin{equation*}
+					       \mathbf{y} =
+					       \begin{pmatrix}
+						       y_1    \\
+						       y_2    \\
+						       \vdots \\
+						       y_n
+					       \end{pmatrix}, \quad
+					       \mathbf{A} =
+					       \begin{pmatrix}
+						       1      & x_1    \\
+						       1      & x_2    \\
+						       \vdots & \vdots \\
+						       1      & x_n
+					       \end{pmatrix}
+				       \end{equation*}
+				 \item Regressionsparameter in Vektorform:
+				       \begin{equation*}
+					       \mathbf{b} =
+					       \begin{pmatrix}
+						       b \\
+						       a
+					       \end{pmatrix}
+				       \end{equation*}
+				 \item Normalengleichung:
+				       \begin{equation*}
+					       \mathbf{A}^T \mathbf{A} \mathbf{b} = \mathbf{A}^T \mathbf{y}
+				       \end{equation*}
+				 \item Lösung:
+				       \begin{equation*}
+					       \mathbf{b} = (\mathbf{A}^T \mathbf{A})^{-1} \mathbf{A}^T \mathbf{y}
+				       \end{equation*}
+				 \item Residuenvektor:
+				       \begin{equation*}
+					       \vec{\mathbf{\epsilon}} = \vec{\mathbf{y}} - \mathbf{A} \vec{\mathbf{b}}
+				       \end{equation*}
+			 \end{itemize}
 
-  \section*{Schliessende Statistik}
-  \subsection*{Zufallsstichprobe}
-  \begin{itemize}
-    \item Stichprobe, bei der jedes Element der Grundgesamtheit die gleiche Wahrscheinlichkeit hat, ausgewählt zu werden
-    \item Wichtig für die Repräsentativität der Stichprobe
-  \end{itemize}
-  \subsection*{Parameterschätzung}
-  \begin{itemize}
-    \item Erwartungstreue Schätzer: $E(\hat{\theta}) = \theta$
-    \item Effizienz: Varianz des Schätzers ist minimal
-    \item Konsistenz: Schätzer konvergiert gegen den wahren Parameterwert bei wachsendem Stichprobenumfang
-  \end{itemize}
+		\section*{Schliessende Statistik}
+		 \subsection*{Zufallsstichprobe}
+			 \begin{itemize}
+				 \item Stichprobe, bei der jedes Element der Grundgesamtheit die gleiche Wahrscheinlichkeit hat, ausgewählt zu werden
+				 \item Wichtig für die Repräsentativität der Stichprobe
+			 \end{itemize}
+		 \subsection*{Parameterschätzung}
+			 \begin{itemize}
+				 \item Erwartungstreue Schätzer: $E(\hat{\theta}) = \theta$
+				 \item Effizienz: Varianz des Schätzers ist minimal
+				 \item Konsistenz: Schätzer konvergiert gegen den wahren Parameterwert bei wachsendem Stichprobenumfang
+			 \end{itemize}
 
-  \subsection*{Vertrauensintervalle / Konfidenzintervalle}
-  \begin{itemize}
-    \item Intervall, das den wahren Parameterwert mit einer bestimmten Wahrscheinlichkeit (Konfidenzniveau) enthält
-    \item Für den Mittelwert bei bekannter Varianz:
-          \begin{equation*}
-            VI = \bar{x} \pm z_{\alpha/2} \cdot \frac{\sigma}{\sqrt{n}} \quad \text{ siehe Tabelle Zeile 1}
-          \end{equation*}
-    \item Für den Mittelwert bei unbekannter Varianz:
-          \begin{equation*}
-            VI = \bar{x} \pm t_{\alpha/2, n-1} \cdot \frac{s}{\sqrt{n}} \quad \text{ siehe Tabelle Zeile 2}
-          \end{equation*}
-  \end{itemize}
-\end{multicols*}
+		 \subsection*{Vertrauensintervalle / Konfidenzintervalle}
+			 \begin{itemize}
+				 \item Intervall, das den wahren Parameterwert mit einer bestimmten Wahrscheinlichkeit (Konfidenzniveau) enthält
+				 \item Für den Mittelwert bei bekannter Varianz:
+				       \begin{equation*}
+					       VI = \bar{x} \pm z_{\alpha/2} \cdot \frac{\sigma}{\sqrt{n}} \quad \text{ siehe Tabelle Zeile 1}
+				       \end{equation*}
+				 \item Für den Mittelwert bei unbekannter Varianz:
+				       \begin{equation*}
+					       VI = \bar{x} \pm t_{\alpha/2, n-1} \cdot \frac{s}{\sqrt{n}} \quad \text{ siehe Tabelle Zeile 2}
+				       \end{equation*}
+			 \end{itemize}
+	\end{multicols*}
 
-\pagebreak
+	\pagebreak
 
-\begin{multicols}{2}
-  \setlength{\premulticols}{1pt}
-  \setlength{\postmulticols}{1pt}
-  \setlength{\multicolsep}{1pt}
-  \setlength{\columnsep}{2pt}
-  {\small
-    \section*{Wichtigste Tabellen}
-    \subsection*{Vertrausensintervalle zum Niveau $\gamma$}
-    \begin{tabular}{|>{\centering\arraybackslash}m{0.1\linewidth}
-      |>{\centering\arraybackslash}m{0.1\linewidth}
-      |>{\centering\arraybackslash}m{0.23\linewidth}
-      |>{\centering\arraybackslash}m{0.15\linewidth}
-      |>{\centering\arraybackslash}m{0.12\linewidth}
-      |>{\centering\arraybackslash}m{0.15\linewidth}|}
-      \hline
-      Verteilung der Grundgesamtheit                                                                                                                & zu schätzender Parameter & Schätzfunktion & Zugehörige standardisierte Zufallsvariable & Verteilung und benötigte Quantile  & Zufalls-variablen für Intervallgrenzen \\
-      \hline
-      Normal-verteilung, Varianz bekannt                                                                                                            &
-      $\mu$ (Erwartungswert)                                                                                                                        &
-      \begin{equation*}
-        \bar{x} = \frac{1}{n} \sum_{i=1}^{n} x_i
-      \end{equation*}                                                                                                      &
-      \begin{equation*}
-        Z = \frac{\bar{X} - \mu}{\sigma / \sqrt{n}}
-      \end{equation*}                                                                    &
-      Standard-normal-verteilung $c = u_p$ mit $p = \frac{1 + \gamma}{2}$                                                                           &
-      \begin{equation*}
-        \Theta_u = \bar{x} - c \cdot \frac{\sigma}{\sqrt{n}}
-      \end{equation*} \newline \begin{equation*}
-                                 \Theta_o = \bar{x} + c \cdot \frac{\sigma}{\sqrt{n}}
-                               \end{equation*}                                                                                                                                                                                                                          \\
-      \hline
-      Normal-verteilung, Varianz unbekannt und $n \leq 30$ (sonst Fall 1 mit $s$ statt $\sigma$)                                                    &
-      $\mu$ (Erwartungswert)                                                                                                                        &
-      \begin{equation*}
-        \bar{x} = \frac{1}{n} \sum_{i=1}^{n} x_i
-      \end{equation*} \newline \begin{equation*}
-                                 S^2 = \frac{1}{n-1} \sum_{i=1}^{n} (x_i - \bar{x})^2
-                               \end{equation*}                                                                                          &
-      \begin{equation*}
-        T = \frac{\bar{X} - \mu}{S / \sqrt{n}}
-      \end{equation*}                                                                         &
-      t-Verteilung mit $f = n - 1$ Freiheitsgraden, $c = t_{f, p}$ mit $p = \frac{1 + \gamma}{2}$                                                   &
-      \begin{equation*}
-        \Theta_u = \bar{x} - c \cdot \frac{S}{\sqrt{n}}
-      \end{equation*} \newline \begin{equation*}
-                                 \Theta_o = \bar{x} + c \cdot \frac{S}{\sqrt{n}}
-                               \end{equation*}                                                                                                                                                                                                                               \\
-      \hline
-      Normal-verteilung                                                                                                                             &
-      $\sigma^2$ (Varianz)                                                                                                                          &
-      \begin{equation*}
-        \bar{X} = \frac{1}{n} \sum_{i=1}^{n} X_i
-      \end{equation*} \newline \begin{equation*}
-                                 S^2 = \frac{1}{n-1} \sum_{i=1}^{n} (X_i - \bar{X})^2
-                               \end{equation*}                                                                                          &
-      \begin{equation*}
-        Z = \frac{(n-1) S^2}{\sigma^2}
-      \end{equation*}                                                                                                                &
-      Chi-Quadrat-Verteilung mit $f = n - 1$, $c_1 = z_{p_1; f}$, $c_2 = z_{p_2; f}$ mit $p_1 = \frac{1 - \gamma}{2}$, $p_2 = \frac{1 + \gamma}{2}$ &
-      \begin{equation*}
-        \Theta_u = \frac{(n-1) S^2}{c_2}
-      \end{equation*} \newline \begin{equation*}
-                                 \Theta_o = \frac{(n-1) S^2}{c_1}
-                               \end{equation*}                                                                                                                                                                                                                                                             \\
-      \hline
-      Bernoulli-Verteilung mit $n \hat{p} (1-\hat{p}) > 9$                                                                                          &
-      $p$ (Erfolgswahrscheinlichkeit)                                                                                                               &
-      \begin{equation*}
-        \bar{X} = \frac{1}{n} \sum_{i=1}^{n} X_i
-      \end{equation*} \newline $X_i$ 0 oder 1 mit \newline $P(X_i = 1) = p$                                                                         &
-      \begin{equation*}
-        U = \frac{\bar{X} - p}{\sqrt{\frac{p(1-p)}{n}}}
-      \end{equation*}                                                                               &
-      Standard-normal-verteilung $c = u_p$ mit $p = \frac{1 + \gamma}{2}$                                                                           &
-      $\Theta_u = \bar{x} - c \cdot$ $\sqrt{\frac{\bar{x}(1-\bar{x})}{n}}$
-      \newline \newline
-      $\Theta_o = \bar{x} + c \cdot$ $\sqrt{\frac{\bar{x}(1-\bar{x})}{n}}$                                                                                                                                                                                                                                                 \\
-      \hline
-                                                                                                                                                    &                          &                &                                            & $c$ aus Tabelle je nach Verteilung &                                        \\
-      \hline
-                                                                                                                                                    &                          &                &                                            & $\gamma$ Prozent (0.xx)            &                                        \\
-      \hline
-    \end{tabular}
-  }
+	\begin{multicols}{2}
+		\setlength{\premulticols}{1pt}
+		\setlength{\postmulticols}{1pt}
+		\setlength{\multicolsep}{1pt}
+		\setlength{\columnsep}{2pt}
+		{\small
+		\section*{Wichtigste Tabellen}
+		 \subsection*{Vertrausensintervalle zum Niveau $\gamma$}
+			 \begin{tabular}{|>{\centering\arraybackslash}m{0.1\linewidth}
+				 |>{\centering\arraybackslash}m{0.1\linewidth}
+				 |>{\centering\arraybackslash}m{0.23\linewidth}
+				 |>{\centering\arraybackslash}m{0.15\linewidth}
+				 |>{\centering\arraybackslash}m{0.12\linewidth}
+				 |>{\centering\arraybackslash}m{0.15\linewidth}|}
+				 \hline
+				 Verteilung der Grundgesamtheit                                                                                                                & zu schätzender Parameter & Schätzfunktion & Zugehörige standardisierte Zufallsvariable & Verteilung und benötigte Quantile  & Zufalls-variablen für Intervallgrenzen \\
+				 \hline
+				 Normal-verteilung, Varianz bekannt                                                                                                            &
+				 $\mu$ (Erwartungswert)                                                                                                                        &
+				 \begin{equation*}
+					 \bar{x} = \frac{1}{n} \sum_{i=1}^{n} x_i
+				 \end{equation*}                                                                                                      &
+				 \begin{equation*}
+					 Z = \frac{\bar{X} - \mu}{\sigma / \sqrt{n}}
+				 \end{equation*}                                                                    &
+				 Standard-normal-verteilung $c = u_p$ mit $p = \frac{1 + \gamma}{2}$                                                                           &
+				 \begin{equation*}
+					 \Theta_u = \bar{x} - c \cdot \frac{\sigma}{\sqrt{n}}
+				 \end{equation*} \newline \begin{equation*}
+					                          \Theta_o = \bar{x} + c \cdot \frac{\sigma}{\sqrt{n}}
+				                          \end{equation*}                                                                                                                                                                                                                          \\
+				 \hline
+				 Normal-verteilung, Varianz unbekannt und $n \leq 30$ (sonst Fall 1 mit $s$ statt $\sigma$)                                                    &
+				 $\mu$ (Erwartungswert)                                                                                                                        &
+				 \begin{equation*}
+					 \bar{x} = \frac{1}{n} \sum_{i=1}^{n} x_i
+				 \end{equation*} \newline \begin{equation*}
+					                          S^2 = \frac{1}{n-1} \sum_{i=1}^{n} (x_i - \bar{x})^2
+				                          \end{equation*}                                                                                          &
+				 \begin{equation*}
+					 T = \frac{\bar{X} - \mu}{S / \sqrt{n}}
+				 \end{equation*}                                                                         &
+				 t-Verteilung mit $f = n - 1$ Freiheitsgraden, $c = t_{f, p}$ mit $p = \frac{1 + \gamma}{2}$                                                   &
+				 \begin{equation*}
+					 \Theta_u = \bar{x} - c \cdot \frac{S}{\sqrt{n}}
+				 \end{equation*} \newline \begin{equation*}
+					                          \Theta_o = \bar{x} + c \cdot \frac{S}{\sqrt{n}}
+				                          \end{equation*}                                                                                                                                                                                                                               \\
+				 \hline
+				 Normal-verteilung                                                                                                                             &
+				 $\sigma^2$ (Varianz)                                                                                                                          &
+				 \begin{equation*}
+					 \bar{X} = \frac{1}{n} \sum_{i=1}^{n} X_i
+				 \end{equation*} \newline \begin{equation*}
+					                          S^2 = \frac{1}{n-1} \sum_{i=1}^{n} (X_i - \bar{X})^2
+				                          \end{equation*}                                                                                          &
+				 \begin{equation*}
+					 Z = \frac{(n-1) S^2}{\sigma^2}
+				 \end{equation*}                                                                                                                &
+				 Chi-Quadrat-Verteilung mit $f = n - 1$, $c_1 = z_{p_1; f}$, $c_2 = z_{p_2; f}$ mit $p_1 = \frac{1 - \gamma}{2}$, $p_2 = \frac{1 + \gamma}{2}$ &
+				 \begin{equation*}
+					 \Theta_u = \frac{(n-1) S^2}{c_2}
+				 \end{equation*} \newline \begin{equation*}
+					                          \Theta_o = \frac{(n-1) S^2}{c_1}
+				                          \end{equation*}                                                                                                                                                                                                                                                             \\
+				 \hline
+				 Bernoulli-Verteilung mit $n \hat{p} (1-\hat{p}) > 9$                                                                                          &
+				 $p$ (Erfolgswahrscheinlichkeit)                                                                                                               &
+				 \begin{equation*}
+					 \bar{X} = \frac{1}{n} \sum_{i=1}^{n} X_i
+				 \end{equation*} \newline $X_i$ 0 oder 1 mit \newline $P(X_i = 1) = p$                                                                         &
+				 \begin{equation*}
+					 U = \frac{\bar{X} - p}{\sqrt{\frac{p(1-p)}{n}}}
+				 \end{equation*}                                                                               &
+				 Standard-normal-verteilung $c = u_p$ mit $p = \frac{1 + \gamma}{2}$                                                                           &
+				 $\Theta_u = \bar{x} - c \cdot$ $\sqrt{\frac{\bar{x}(1-\bar{x})}{n}}$
+				 \newline \newline
+				 $\Theta_o = \bar{x} + c \cdot$ $\sqrt{\frac{\bar{x}(1-\bar{x})}{n}}$                                                                                                                                                                                                                                                 \\
+				 \hline
+				                                                                                                                                               &                          &                &                                            & $c$ aus Tabelle je nach Verteilung &                                        \\
+				 \hline
+				                                                                                                                                               &                          &                &                                            & $\gamma$ Prozent (0.xx)            &                                        \\
+				 \hline
+			 \end{tabular}
+			 }
 
-  \subsection*{Diskrete und Stetige Verteilungen}
-  {\small
-    \begin{tabular}{|>{\centering\arraybackslash}m{0.2\linewidth}
-      |>{\centering\arraybackslash}m{0.32\linewidth}
-      |>{\centering\arraybackslash}m{0.4\linewidth}|}
-      \hline
-                                                                            & \textbf{Diskrete Verteilungen}              & \textbf{Stetige Verteilungen}                                                                                             \\
-      \hline
-      \textbf{Dichtefuntion / PMF / PDF}                                    & $f(x) = P(X = x)$                           & $f(x) = F'(x) \neq P(X=x)$                                                                                                \\
-      \hline
-      \textbf{Kumulative Verteilungsfunktion / CDF}                         & $F(x) = P(X \leq x) = \sum_{t \leq x} f(t)$ & $F(x) = P(X \leq x) = \int_{-\infty}^{x} f(t) dt$                                                                         \\
-      \hline
-      \textbf{Wahrscheinlich-keiten}                                        & \begin{equation*}
-                                                                                P(a \leq X \leq b) = \sum_{x=a}^{b} f(x)
-                                                                              \end{equation*} \newline \begin{equation*}
-                                                                                                         P(a < X \leq b) = \sum_{x=a+1}^{b} f(x)
-                                                                                                       \end{equation*} \newline \begin{equation*}
-                                                                                                                                  P(a < X < b) = \sum_{x=a+1}^{b-1} f(x)
-                                                                                                                                \end{equation*} \newline \begin{equation*}
-                                                                                                                                                           P(a < X) = 1 - F(a)
-                                                                                                                                                         \end{equation*}  & $$\begin{rcases}
-                                                                                                                                                                                  P(a \leq X \leq b) \\
-                                                                                                                                                                                  P(a < X \leq b)    \\
-                                                                                                                                                                                  P(a < X < b)
-                                                                                                                                                                                \end{rcases} \quad = \int_{a}^{b} f(x) dx$$ \newline \begin{equation*}
-                                                                                                                                                                                                                                     P(a < X) = 1 - F(a)
-                                                                                                                                                                                                                                   \end{equation*} \\
-      \hline
-      \textbf{Erwartungswert}                                               &
-      \begin{equation*}
-        E(X) = \sum_{x \in \mathbb{R}} x \cdot f(x)
-      \end{equation*}              &
-      \begin{equation*}
-        E(X) = \int_{-\infty}^{\infty} x \cdot f(x) dx
-      \end{equation*}                                                                                                                                                                                                   \\
-      \hline
-      \textbf{Varianz}                                                      &
-      \begin{equation*}
-        Var(X) = \sum_{x \in \mathbb{R}} (x - E(X))^2 \cdot f(x)
-      \end{equation*} \  &
-      \begin{equation*}
-        Var(X) = \int_{-\infty}^{\infty} (x - E(X))^2 \cdot f(x) dx
-      \end{equation*}                                                                                                                                                                                      \\
-      \hline
-      \textbf{Graphische Darstellung von $f(x)$ und $F(x)$}                 & Stabdiagramm                                & Graph                                                                                                                     \\
-      \hline
-    \end{tabular}
-  }
-\end{multicols}
+		 \subsection*{Diskrete und Stetige Verteilungen}
+			 {\small
+				 \begin{tabular}{|>{\centering\arraybackslash}m{0.2\linewidth}
+					 |>{\centering\arraybackslash}m{0.32\linewidth}
+					 |>{\centering\arraybackslash}m{0.4\linewidth}|}
+					 \hline
+					                                                                       & \textbf{Diskrete Verteilungen}              & \textbf{Stetige Verteilungen}                                                                                             \\
+					 \hline
+					 \textbf{Dichtefuntion / PMF / PDF}                                    & $f(x) = P(X = x)$                           & $f(x) = F'(x) \neq P(X=x)$                                                                                                \\
+					 \hline
+					 \textbf{Kumulative Verteilungsfunktion / CDF}                         & $F(x) = P(X \leq x) = \sum_{t \leq x} f(t)$ & $F(x) = P(X \leq x) = \int_{-\infty}^{x} f(t) dt$                                                                         \\
+					 \hline
+					 \textbf{Wahrscheinlich-keiten}                                        & \begin{equation*}
+						                                                                         P(a \leq X \leq b) = \sum_{x=a}^{b} f(x)
+					                                                                         \end{equation*} \newline \begin{equation*}
+						                                                                                                  P(a < X \leq b) = \sum_{x=a+1}^{b} f(x)
+					                                                                                                  \end{equation*} \newline \begin{equation*}
+						                                                                                                                           P(a < X < b) = \sum_{x=a+1}^{b-1} f(x)
+					                                                                                                                           \end{equation*} \newline \begin{equation*}
+						                                                                                                                                                    P(a < X) = 1 - F(a)
+					                                                                                                                                                    \end{equation*}  & $$\begin{rcases}
+							                                                                                                                                                                         P(a \leq X \leq b) \\
+							                                                                                                                                                                         P(a < X \leq b)    \\
+							                                                                                                                                                                         P(a < X < b)
+						                                                                                                                                                                         \end{rcases} \quad = \int_{a}^{b} f(x) dx$$ \newline \begin{equation*}
+						                                                                                                                                                                                                                              P(a < X) = 1 - F(a)
+					                                                                                                                                                                                                                              \end{equation*} \\
+					 \hline
+					 \textbf{Erwartungswert}                                               &
+					 \begin{equation*}
+						 E(X) = \sum_{x \in \mathbb{R}} x \cdot f(x)
+					 \end{equation*}              &
+					 \begin{equation*}
+						 E(X) = \int_{-\infty}^{\infty} x \cdot f(x) dx
+					 \end{equation*}                                                                                                                                                                                                   \\
+					 \hline
+					 \textbf{Varianz}                                                      &
+					 \begin{equation*}
+						 Var(X) = \sum_{x \in \mathbb{R}} (x - E(X))^2 \cdot f(x)
+					 \end{equation*} \  &
+					 \begin{equation*}
+						 Var(X) = \int_{-\infty}^{\infty} (x - E(X))^2 \cdot f(x) dx
+					 \end{equation*}                                                                                                                                                                                      \\
+					 \hline
+					 \textbf{Graphische Darstellung von $f(x)$ und $F(x)$}                 & Stabdiagramm                                & Graph                                                                                                                     \\
+					 \hline
+				 \end{tabular}
+			 }
+	\end{multicols}
 
-\pagebreak
+	\pagebreak
 
-\begin{multicols*}{2}
-  \setlength{\premulticols}{1pt}
-  \setlength{\postmulticols}{1pt}
-  \setlength{\multicolsep}{1pt}
-  \setlength{\columnsep}{2pt}
+	\begin{multicols*}{2}
+		\setlength{\premulticols}{1pt}
+		\setlength{\postmulticols}{1pt}
+		\setlength{\multicolsep}{1pt}
+		\setlength{\columnsep}{2pt}
 
-  \section*{Wichtigste Diagramme}
-  \subsection*{Boxplot}
-  \begin{itemize}
-    \item Visuelle Darstellung der Verteilung eines Merkmals
-    \item Zeigt Median, Quartile, Ausreisser und Spannweite
-    \item Bestandteile:
-          \begin{itemize}
-            \item \textbf{Median} (Q2): Mittlerer Wert der Daten
-            \item \textbf{Unteres Quartil} (Q1): Median der unteren Hälfte der Daten
-            \item \textbf{Oberes Quartil} (Q3): Median der oberen Hälfte der Daten
-            \item \textbf{Interquartilsabstand} (IQR): $IQR = Q3 - Q1$
-            \item \textbf{Whiskers}: Linien, die bis zum letzten Datenpunkt innerhalb von $1.5 \cdot IQR$ von Q1 und Q3 reichen
-            \item \textbf{Ausreisser}: Datenpunkte ausserhalb der Whiskers
-          \end{itemize}
-  \end{itemize}
-  \includegraphics[width=0.7\linewidth]{assets/Boxplot.png}
+		\section*{Wichtigste Diagramme}
+		 \subsection*{Boxplot}
+			 \begin{itemize}
+				 \item Visuelle Darstellung der Verteilung eines Merkmals
+				 \item Zeigt Median, Quartile, Ausreisser und Spannweite
+				 \item Bestandteile:
+				       \begin{itemize}
+					       \item \textbf{Median} (Q2): Mittlerer Wert der Daten
+					       \item \textbf{Unteres Quartil} (Q1): Median der unteren Hälfte der Daten
+					       \item \textbf{Oberes Quartil} (Q3): Median der oberen Hälfte der Daten
+					       \item \textbf{Interquartilsabstand} (IQR): $IQR = Q3 - Q1$
+					       \item \textbf{Whiskers}: Linien, die bis zum letzten Datenpunkt innerhalb von $1.5 \cdot IQR$ von Q1 und Q3 reichen
+					       \item \textbf{Ausreisser}: Datenpunkte ausserhalb der Whiskers
+				       \end{itemize}
+			 \end{itemize}
+			 \includegraphics[width=0.7\linewidth]{assets/Boxplot.png}
 
-  \subsection*{Histogramm}
-  \begin{itemize}
-    \item Grafische Darstellung der Häufigkeitsverteilung eines Merkmals
-    \item Daten werden in Klassen (Intervalle) eingeteilt
-    \item Höhe der Balken entspricht der Häufigkeit oder Dichte der Daten in jeder Klasse
-    \item Wichtige Begriffe:
-          \begin{itemize}
-            \item \textbf{Klassenbreite}: Breite der Intervalle
-            \item \textbf{Absolute Häufigkeit}: Anzahl der Datenpunkte in einer Klasse
-            \item \textbf{Relative Häufigkeit}: Anteil der Datenpunkte in einer Klasse
-            \item \textbf{Dichte}: Relative Häufigkeit dividiert durch die Klassenbreite
-          \end{itemize}
-  \end{itemize}
-  \includegraphics[width=0.3\linewidth]{assets/Histogramm.png}
+		 \subsection*{Histogramm}
+			 \begin{itemize}
+				 \item Grafische Darstellung der Häufigkeitsverteilung eines Merkmals
+				 \item Daten werden in Klassen (Intervalle) eingeteilt
+				 \item Höhe der Balken entspricht der Häufigkeit oder Dichte der Daten in jeder Klasse
+				 \item Wichtige Begriffe:
+				       \begin{itemize}
+					       \item \textbf{Klassenbreite}: Breite der Intervalle
+					       \item \textbf{Absolute Häufigkeit}: Anzahl der Datenpunkte in einer Klasse
+					       \item \textbf{Relative Häufigkeit}: Anteil der Datenpunkte in einer Klasse
+					       \item \textbf{Dichte}: Relative Häufigkeit dividiert durch die Klassenbreite
+				       \end{itemize}
+			 \end{itemize}
+			 \includegraphics[width=0.3\linewidth]{assets/Histogramm.png}
 
-  \subsection*{Streuungsdiagramm / Scatterplot}
-  \begin{itemize}
-    \item Grafische Darstellung der Beziehung zwischen zwei quantitativen Merkmalen
-    \item Jeder Punkt repräsentiert ein Datenpaar $(x_i, y_i)$
-    \item Hilft, Korrelationen oder Trends zwischen den Merkmalen zu erkennen
-  \end{itemize}
-  \includegraphics[width=0.6\linewidth]{assets/Scatterplot.png}
-\end{multicols*}
-\includepdf[pages=-, fitpaper=true]{assets/STS_TabellenVerteilungen.pdf}
+		 \subsection*{Streuungsdiagramm / Scatterplot}
+			 \begin{itemize}
+				 \item Grafische Darstellung der Beziehung zwischen zwei quantitativen Merkmalen
+				 \item Jeder Punkt repräsentiert ein Datenpaar $(x_i, y_i)$
+				 \item Hilft, Korrelationen oder Trends zwischen den Merkmalen zu erkennen
+			 \end{itemize}
+			 \includegraphics[width=0.6\linewidth]{assets/Scatterplot.png}
+	\end{multicols*}
+	\includepdf[pages=-, fitpaper=true]{assets/STS_TabellenVerteilungen.pdf}
 \end{document}
